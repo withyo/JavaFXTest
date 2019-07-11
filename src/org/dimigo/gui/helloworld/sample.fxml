@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dimigo.gui.helloworld.sickSearchController">
+   <children>
+      <TextField fx:id="txtSearch" layoutX="226.0" layoutY="46.0" prefHeight="27.0" prefWidth="179.0" />
+      <ComboBox fx:id="cbSearch" layoutX="109.0" layoutY="46.0" prefHeight="27.0" prefWidth="113.0" />
+      <Button fx:id="btnSearch" layoutX="413.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="16.0" prefWidth="45.0" text="검색">
+         <font>
+            <Font name="KoPubWorldDotum_Pro Medium" size="12.0" />
+         </font></Button>
+      <Label layoutX="48.0" layoutY="48.0" text="검색조건">
+         <font>
+            <Font name="KoPubWorldDotum_Pro Bold" size="13.0" />
+         </font></Label>
+      <TableView fx:id="CdTableView" layoutX="21.0" layoutY="100.0" prefHeight="287.0" prefWidth="557.0" visible="false">
+        <columns>
+          <TableColumn prefWidth="200.0" text="질병코드" />
+          <TableColumn minWidth="1.0" prefWidth="356.0" text="질병명" />
+        </columns>
+      </TableView>
+      <TableView fx:id="NmTableView" layoutX="21.0" layoutY="100.0" prefHeight="287.0" prefWidth="557.0" visible="false">
+        <columns>
+          <TableColumn prefWidth="381.0" text="질병명" />
+          <TableColumn prefWidth="175.0" text="질병코드" />
+        </columns>
+      </TableView>
+      <Button fx:id="lateSearchList" layoutX="475.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickLate" text="최근 조회 내역 보기" textFill="#797777">
+         <font>
+            <Font name="KoPubWorldDotum_Pro Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
